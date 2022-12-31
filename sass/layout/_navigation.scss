@@ -1,0 +1,124 @@
+.navbar{
+    width: 100%;
+    background-color:$color-white;
+    border-radius: 7.5rem;
+    padding: 1.6rem 2.1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    @include responsive(phone) {
+        height: 4.1rem;
+        padding: .6rem 1.3rem;
+    }
+
+    &__logo{
+        // margin-right: 7.3rem;
+        transition: all 0.3s;
+
+        @include responsive(big-table){
+            margin-right: 5rem;
+        }
+
+        @include responsive(table){
+            margin: 0;
+        }
+
+        &--img{
+            width: 5.3rem;
+            height: 1.9rem;
+            @include responsive(phone){
+                 width: 4rem;
+                 height: 14.5rem;
+            }
+        }
+
+        &:hover{
+            opacity: .6;
+        }
+        &:active{
+            opacity: .8;
+        }
+
+    }
+
+
+    &__list{
+       list-style: none;
+       margin: 0;
+       padding: 0;
+       margin-right: 33.2rem;
+
+       display: flex;
+       align-items: center;
+
+       @include responsive(big-table){
+        margin-right:15rem ;
+       }
+
+       @include responsive(table){
+        display: none;
+       }
+       &--item:not(:last-child){
+         margin-right: 4.1rem;
+       }
+    }
+
+
+    &__register{
+        display: flex;
+        align-items: center;
+        &--link{
+            margin-right: 1.496rem;
+
+            @include responsive(big-table){
+                margin-right: .5rem;
+            }
+
+            @include responsive(table){
+                display: none;
+            }
+        }
+
+        &--btn{
+            padding: .8rem 1.8rem .8rem 1.6rem;
+            background-color:$color-secondary;
+            color: $color-white;
+            text-decoration: none;
+            border-radius: 3.4rem;
+            
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: 1.2rem;
+            transition: all .3s;
+
+            display: flex;
+            align-items: center;
+            column-gap: .5rem;
+
+        }
+
+        &--btn:hover{
+           background-color:$color-primary;
+        }
+    }
+
+    &__burger--btn{
+        display: none;
+        img{
+            width: 1.8rem;
+        }
+
+        @include responsive(table){
+            display: inline-block;
+        }
+    }
+
+    &__burger--btn:checked ~ .sidebar {
+        display: inline-block;
+    }
+
+      
+}

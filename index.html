@@ -1,12 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ytyt app</title>
+    <!-- Style and fonts -->
+    <link rel="stylesheet" href="./fonts/stylesheet.css" />
+    <link rel="stylesheet" href="./dist/css/main.min.css" />
+  </head>
+  <body>
+    <!-- Header section -->
+
+    <header class="header">
+      <div class="container">
+        <!-- Site navigation -->
+        <div class="navbar">
+          <a href="#" class="navbar__logo">
+            <img
+              src="./img/site-logo.svg"
+              alt="site nav logo"
+              class="navbar__logo--img"
+            />
+          </a>
+
+          <ul class="navbar__list">
+            <li class="navbar__list--item">
+              <a href="#" class="navbar__list--item__link link__text"
+                >Чему вы научитесь</a
+              >
+            </li>
+            <li class="navbar__list--item">
+              <a href="#" class="navbar__list--item__link link__text"
+                >Процесс обучения</a
+              >
+            </li>
+            <li class="navbar__list--item">
+              <a href="#" class="navbar__list--item__link link__text"
+                >Стоимость</a
+              >
+            </li>
+            <li class="navbar__list--item">
+              <a href="#" class="navbar__list--item__link link__text"
+                >Контакты</a
+              >
+            </li>
+          </ul>
+
+          <div class="navbar__register">
+            <a href="#" class="navbar__register--link link__text"
+              >Регистрация</a
+            >
+            <a href="#" class="navbar__register--btn"
+              ><span>&rarr;</span> Войти</a
+            >
+          </div>
+
+          <button class="navbar__burger--btn" id="navbar-btn">
+            <img src="./img/bars.svg" alt="burger button image" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="sidebar sidebar-none" id="sidebar">
+        <ul class="sidebar__list">
+          <li class="sidebar__list--btn">
+            <button class="sidebar__list--btn__item" id="sidebar-btn">
+              &times;
+            </button>
+          </li>
+
+          <li class="sidebar__list--item">
+            <a href="#" class="sidebar__list--item__link link__text"
+              >Чему вы научитесь</a
+            >
+          </li>
+          <li class="sidebar__list--item">
+            <a href="#" class="sidebar__list--item__link link__text"
+              >Процесс обучения</a
+            >
+          </li>
+          <li class="sidebar__list--item">
+            <a href="#" class="sidebar__list--item__link link__text"
+              >Стоимость</a
+            >
+          </li>
+          <li class="sidebar__list--item">
+            <a href="#" class="sidebar__list--item__link link__text"
+              >Контакты</a
+            >
+          </li>
+          <li class="sidebar__list--item">
+            <a href="#" class="sidebar__list--item__link link__text"
+              >Регистрация</a
+            >
+          </li>
+
+          <li class="sidebar__list--item">
+            <a href="#" class="navbar__register--btn"
+              ><span>&rarr;</span> Войти</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <script>
+      //    sidebar add
+      document.getElementById("navbar-btn").addEventListener("click", () => {
+        document.getElementById("sidebar").classList.remove("sidebar-none");
+        document.getElementById("sidebar").classList.add("sidebar-hidden");
+      });
+
+      // sidebar remove
+      document.getElementById("sidebar-btn").addEventListener("click", () => {
+        document.getElementById("sidebar").classList.add("sidebar-none");
+        document.getElementById("sidebar").classList.remove("sidebar-hidden");
+      });
+    </script>
+  </body>
 </html>
