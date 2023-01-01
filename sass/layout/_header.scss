@@ -8,6 +8,9 @@
   @include responsive(table){
     height:150vh;
   }
+  @include responsive(phone){
+    height:120vh;
+  }
 }
 
 // about section
@@ -120,8 +123,10 @@
 
   &--arrow{
     position: absolute;
-    bottom: -10rem;
-    left: 50%;
+    bottom: -7.5rem;
+    left: 48%;
+    // transform: translate(-50, 0);
+    // margin-left: auto;
 
     background-color: $color-white;
     width: 3.7rem;

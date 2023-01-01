@@ -1,56 +1,96 @@
 // link typograph size
-.link__text{
-    color: $color-text;
-    font-size: 1.3rem;
-    line-height: 1.3rem;
-    text-decoration: none;
-    transition: all 0.3s;
+.link__text {
+  color: $color-text;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  text-decoration: none;
+  transition: all 0.3s;
 
-    &:hover{
-      color: $color-primary;
-    }
+  &:hover {
+    color: $color-primary;
+  }
 
-    @include responsive(big-table){
-        font-size: 1rem;
-        line-height: 1rem;
-    }
+  @include responsive(big-table) {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
 
-    @include responsive(table){
-        font-size: 1rem;
-        line-height: 1rem;
-    }
+  @include responsive(table) {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
+.link__text--mobile {
+  color: $color-text;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $color-primary;
+  }
 }
 
 // heading size
 
-.headeing__1--big{
-    font-size: 4.6rem;
-    font-weight: 500;
-    line-height: 4.6rem;
+.headeing__1--big {
+  font-size: 4.6rem;
+  font-weight: 500;
+  line-height: 4.6rem;
 
+  @include responsive(desktop) {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
 
-    @include responsive(desktop){
-        font-size: 4rem;
-        line-height: 4rem;
-    }
+  @include responsive(big-table) {
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+  }
 
-    @include responsive(big-table){
-        font-size: 3.2rem;
-        line-height: 3.2rem;
-    }
+  @include responsive(table) {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+  }
 
-    @include responsive(table){
-        font-size: 2.8rem;
-        line-height: 2.8rem;
-    }
-    
-    @include responsive(phone){
-        font-size: 2.6rem;
-        line-height: 2.6rem;
-    }
-    
-    @include responsive(m-phone){
-        font-size: 2.4rem;
-        line-height: 2.4rem;
-    }
+  @include responsive(phone) {
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+  }
+
+  @include responsive(m-phone) {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+  }
+}
+
+.heading__1--medium {
+  font-size: 4.6rem;
+  line-height: 4.6rem;
+  font-weight: 600;
+
+  @include responsive(desktop) {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  @include responsive(big-table) {
+    font-size: 3.2rem;
+    line-height: 3.2rem;
+  }
+
+  @include responsive(table) {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+  }
+
+  @include responsive(phone) {
+    font-size: 2.6rem;
+  }
+
+  @include responsive(m-phone) {
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+  }
 }
