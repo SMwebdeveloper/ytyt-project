@@ -15,7 +15,7 @@
     }
 
     &__logo{
-        // margin-right: 7.3rem;
+        margin-right: 7.3rem;
         transition: all 0.3s;
 
         @include responsive(big-table){
@@ -54,6 +54,10 @@
        display: flex;
        align-items: center;
 
+       @include responsive(desktop){
+        margin-right: 25rem;
+       }
+
        @include responsive(big-table){
         margin-right:15rem ;
        }
@@ -63,7 +67,18 @@
        }
        &--item:not(:last-child){
          margin-right: 4.1rem;
-       }
+
+        }
+        @include responsive(desktop){
+            &--item:not(:last-child){
+               margin-right: 3rem;
+            }
+           }
+        @include responsive(big-table){
+         &--item:not(:last-child){
+            margin-right: 2.5rem;
+         }
+        }
     }
 
 

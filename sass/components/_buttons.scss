@@ -1,0 +1,31 @@
+.btn{
+    background-color:$color-primary;
+    border-radius: 32.1rem;
+    color: $color-white;
+    padding: 2.7rem 5rem 2.8rem 4.5rem;
+
+    font-size: 2rem;
+    line-height: 1.9rem;
+    letter-spacing: -3%;
+    transition: all .3s;
+
+    span{
+        display: inline-block;
+        font-size: 2.5rem;
+        transform: rotate(-45deg);
+    }
+
+    &:hover{
+        background-color: $color-secondary;
+    }
+
+    @include responsive(big-table){
+        padding:2.5rem 4.8rem 2.6rem 4.3rem ;
+        font-size: 1.8rem;
+    }
+
+    @include responsive(phone){
+        font-size: 1.6rem;
+        line-height: 1.7rem;
+    }
+}
