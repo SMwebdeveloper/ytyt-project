@@ -1,0 +1,153 @@
+.card {
+  padding: 8.4rem 0;
+  border-bottom-left-radius: 10rem;
+  border-bottom-right-radius: 10rem;
+  background-color: $color-white;
+}
+
+.card__content {
+  h1 {
+    width: 59.8rem;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 3.4rem;
+
+    @include responsive(desktop) {
+      width: 50rem;
+    }
+    @include responsive(big-table) {
+      width: 40rem;
+    }
+    @include responsive(table) {
+      width: 35rem;
+      margin-bottom: 3rem;
+    }
+    @include responsive(phone) {
+      width: 30rem;
+      margin-bottom: 2.4rem;
+    }
+    @include responsive(m-phone) {
+      width: 28.3rem;
+    }
+  }
+  &--items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.7rem;
+
+    @include responsive(big-table) {
+      gap: 2.3rem;
+    }
+    @include responsive(phone) {
+      gap: 1rem;
+    }
+  }
+  &--item {
+    width: 22%;
+    height: 25.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0 3rem;
+    background-color: $card-bg-color;
+    border-radius: 3rem;
+
+    @include responsive(big-table) {
+      padding: 4rem 1rem 3rem;
+    }
+    @include responsive(table) {
+      width: 28%;
+    }
+    @include responsive(phone) {
+      width: 48%;
+      height: 18rem;
+      padding-top: 2.7rem;
+    }
+  }
+  &--img {
+    width: 5.7rem;
+    height: 5.7rem;
+    margin-bottom: 1.9rem;
+    @include responsive(table) {
+      width: 5.3rem;
+      height: 5.3rem;
+      margin-bottom: 1.6rem;
+    }
+    @include responsive(phone) {
+      width: 4.5rem;
+      height: 4.5rem;
+      margin-bottom: 1.2rem;
+    }
+    @include responsive(m-phone) {
+      width: 3.9rem;
+      height: 3.9rem;
+      margin-bottom: 0.9rem;
+    }
+  }
+  h4 {
+    max-width: 16.6rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    @include responsive(table) {
+      max-width: 14rem;
+    }
+    @include responsive(phone) {
+      max-width: 12rem;
+      margin-bottom: .5rem;
+    }
+  }
+
+  &--item:nth-child(5) {
+    .heading__4 {
+      max-width: 20rem;
+    }
+  }
+  &--paragraph {
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    max-width: 20rem;
+
+    @include responsive(table) {
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+    }
+    @include responsive(phone) {
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+      max-width: 12rem;
+    }
+  }
+  .last__card--item {
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @include responsive(phone) {
+      width: 100%;
+      padding: 1.9rem auto;
+      height: 8.6rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      column-gap: 1.9rem;
+      padding: 1.9rem 0;
+
+      h4{
+        max-width: 15.1rem;
+        margin-bottom: .5rem;
+      }
+      p{
+        max-width: 15rem;
+        text-align: left;
+      }
+    }
+  }
+
+}
