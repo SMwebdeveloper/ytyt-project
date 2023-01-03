@@ -1,0 +1,290 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color-text, 0.8);
+  visibility: hidden;
+  transition: all .3s;
+  opacity: 0;
+  z-index: 999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    width: 70%;
+    background-color: $color-white;
+    border-radius: 3rem;
+    text-align: center;
+    padding: 5.5rem 3rem 4rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // transform: scale(0.25);
+    // opacity: 0;
+    // visibility: hidden;
+
+    @include responsive(phone) {
+      width: 90%;
+      padding: 4.5rem 1.8rem 3.8rem;
+    }
+
+    &--btn {
+      position: absolute;
+      top: 2rem;
+      right: 3.5rem;
+      color: $color-gray-times;
+      font-size: 3rem;
+      font-weight: 300;
+
+      @include responsive(table) {
+        right: 2rem;
+      }
+      @include responsive(phone) {
+        top: 1.5rem;
+        right: 1.5rem;
+      }
+    }
+
+    &--title {
+      width: 50.6rem;
+      font-size: 2.4rem;
+      font-weight: 400;
+      line-height: 2.6rem;
+      text-align: center;
+      margin-bottom: 2.2rem;
+
+      @include responsive(big-table) {
+        font-size: 2.2rem;
+      }
+
+      @include responsive(table) {
+        width: 45rem;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+      @include responsive(phone) {
+        width: 30rem;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        margin-bottom: 1.3rem;
+      }
+
+      @include responsive(m-phone) {
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        width: 21.3rem;
+      }
+    }
+
+    &--paragraph {
+      max-width: 51.5rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+
+      @include responsive(table) {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        text-align: justify;
+      }
+    }
+
+    &--about {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      @include responsive(big-table) {
+        align-items: center;
+      }
+    }
+
+    &--title__card {
+      padding: 0.8rem 2.1rem;
+      background-color: $color-white-darker;
+      border-radius: 4.9rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 2.6rem;
+      margin-bottom: 1.8rem;
+
+      @include responsive(phone) {
+        font-weight: 600;
+      }
+    }
+    // modal form
+    .form {
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      @include responsive(big-table) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .form__content {
+      @include responsive(big-table) {
+        align-self: flex-start;
+      }
+      @include responsive(phone) {
+        margin-bottom: 1.9rem;
+      }
+    }
+    .form__radio {
+      margin-bottom: 1.4rem;
+    }
+
+    .form__radio--input {
+      display: none;
+    }
+    .form__radio--label {
+      font-size: 1.5rem;
+      font-weight: 500;
+      line-height: 2.4rem;
+      color: $color-text;
+      display: flex;
+      align-items: center;
+
+      @include responsive(phone) {
+        font-size: 1.2rem;
+      }
+    }
+    .form__radio--btn {
+      display: inline-block;
+      width: 2.2rem;
+      height: 2.2rem;
+      background-color: $color-white-darker;
+      border-radius: 0.4rem;
+      margin-right: 1.8rem;
+      padding: 0.4rem;
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1.4rem;
+        height: 1.4rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $color-primary;
+        border-radius: 0.4rem;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+    }
+
+    .form__radio--input:checked ~ .form__radio--label .form__radio--btn::after {
+      opacity: 1;
+    }
+  }
+
+  // modal content second item
+
+  &__content:nth-child(2) {
+    padding: 3.6rem 3.4rem;
+
+    p {
+      text-align: left;
+      max-width: 63.2rem;
+      margin-bottom: 4.5rem;
+      line-height: 2.2rem;
+
+      @include responsive(table) {
+        margin-bottom: 3.5rem;
+      }
+
+      @include responsive(phone) {
+        margin-bottom: 3.1rem;
+        text-align: center;
+      }
+    }
+  }
+
+  //   modal content 3 item
+  &__content:nth-child(3) {
+    h5 {
+      text-align: left;
+      margin-bottom: 2.7rem;
+
+      @include responsive(table) {
+        text-align: center;
+        margin-bottom: 1.9rem;
+      }
+    }
+
+    p {
+      text-align: left;
+      max-width: 63.5rem;
+
+      @include responsive(table) {
+        text-align: center;
+      }
+    }
+    .modal__second-paragraph {
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+    button {
+      align-self: flex-end;
+
+      @include responsive(table) {
+        align-self: center;
+      }
+    }
+  }
+
+  //   modal content 4 item
+  &__content:nth-child(4) {
+    .modal__content--title__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h5 {
+      @include responsive(table) {
+        max-width: 40rem;
+      }
+      @include responsive(phone) {
+        width: 26rem;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+      }
+    }
+    .btn__text {
+      display: inline-block;
+      @include responsive(table) {
+        display: none;
+      }
+    }
+    // width: 100rem;
+  }
+
+  
+}
+
+// hidden
+
+.modal-hidden{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__item--hidden{
+    // visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}

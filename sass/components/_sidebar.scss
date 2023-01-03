@@ -9,6 +9,8 @@
     height: 100vh;
     background-color:rgba($sidebar-bg-color, 0.8);
     padding: 1.4rem 1rem;
+    opacity: 0;
+    transition: all 0.3s;
     
 
     &__list{
@@ -21,6 +23,7 @@
         flex-direction: column;
         align-items: flex-start;
         margin-left: auto;
+        transition: all .5s .3s;
 
         &--item{
             list-style: none;
@@ -53,4 +56,5 @@
 
 .sidebar-hidden{
     display: inline-block;
+    opacity: 1;
 }
