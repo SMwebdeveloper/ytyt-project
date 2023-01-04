@@ -1,0 +1,158 @@
+.halpers {
+  background-color: $color-white;
+  border-radius: 8rem;
+  padding: 9rem 0;
+
+  @include responsive(phone){
+    padding: 3.5rem 0;
+    border-radius: 3rem;
+  }
+  @include responsive(m-phone){
+    padding: 1.1rem 0;
+  }
+}
+
+.halpers__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 30rem);
+  gap: 3rem;
+
+  @include responsive(phone) {
+    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 2fr);
+    border-radius: 3rem;
+    gap: 1.2rem;
+  }
+
+  &--item {
+    background-color: $card-bg-color;
+    border-radius: 4rem;
+    padding: 4.1rem 6.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include responsive(desktop) {
+      padding: 3.8rem 5.5rem;
+    }
+    @include responsive(big-table) {
+      padding: 3.3rem 5rem;
+    }
+    @include responsive(table) {
+      padding: 2.8rem 4.5rem;
+    }
+    @include responsive(phone){
+        width: 32rem;
+        height: 30rem;
+        margin: 0 auto;
+        padding: 3.4rem 4.8rem;
+    }
+  }
+
+  &--img {
+    width: 27.1rem;
+    height: 25.9rem;
+    margin: auto;
+    object-fit: cover;
+
+    @include responsive(big-table) {
+      width: 25rem;
+      height: 23rem;
+    }
+    @include responsive(table) {
+      width: 23rem;
+      height: 21rem;
+    }
+
+    @include responsive(phone) {
+      max-width: 20.5rem;
+      max-height: 17.5rem;
+    }
+  }
+  &--item:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    @include responsive(phone) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
+  }
+  &--item:nth-child(2) {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+
+    p {
+      max-width: 40rem;
+    }
+    p:not(:last-child){
+        margin-bottom: 1.5rem;
+    }
+
+    @include responsive(phone) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+  }
+  &--item:nth-child(3) {
+    grid-column: 1 / span 2;
+    grid-row: 2 / -1;
+    padding-top: 5.5rem;
+
+    @include responsive(phone) {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+    }
+    p {
+      max-width: 50.2rem;
+    }
+  }
+  &--item:nth-child(4) {
+    grid-column: 3 / -1;
+    grid-row: 2 / -1;
+
+    @include responsive(phone) {
+      grid-column: 1 / -1;
+      grid-row: 4 / 5;
+    }
+  }
+
+  &--title {
+    font-size: 3.2rem;
+    font-weight: 600;
+    line-height: 3rem;
+    margin-bottom: 1.8rem;
+
+    @include responsive(big-table){
+        font-size: 2.8rem;
+        line-height: 2.6rem;
+    }
+
+    @include responsive(table){
+        font-size: 2.6rem;
+        line-height: 2.2rem;
+    }
+    @include responsive(phone){
+        font-size: 2rem;
+        line-height: 1.9rem;
+        // width: ;
+    }
+  }
+  &--paragraph {
+    max-width: 54rem;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+
+    @include responsive(desktop) {
+      font-size: 1.4rem;
+      line-height: 2.3rem;
+    }
+
+    @include responsive(big-table) {
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+    }
+  }
+}

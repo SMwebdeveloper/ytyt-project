@@ -19,8 +19,10 @@ html {
 }
 
 body {
-  background-image: url('../../img/bg-img.jpg');
-  background-color: $card-bg-color;
+//   background-image: url('../../img/bg-img.jpg');
+//   background-size: contain;
+//   background-repeat:no-repeat;
+  background-color: $color-body-bg;
   color: $color-text;
   font-family: $site-font;
   font-size: 1.3rem;

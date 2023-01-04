@@ -4,9 +4,11 @@
   background-position-y: -120rem;
   background-position-x: -25rem;
   padding-top: 5.5rem;
+  padding-bottom: 9rem;
 
   @include responsive (table){
     background-position: center;
+    padding: 6rem 0;
   }
 }
 
