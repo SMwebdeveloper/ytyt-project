@@ -1,0 +1,298 @@
+.video {
+  background-image: url("../../img/bg-img.jpg");
+  background-repeat: no-repeat;
+  background-position-y: -120rem;
+  background-position-x: -25rem;
+  padding-top: 5.5rem;
+
+  @include responsive (table){
+    background-position: center;
+  }
+}
+
+.video__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    margin-bottom: 2.6rem;
+
+    @include responsive(phone) {
+      width: 23rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &--paragraph {
+    max-width: 64.2rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    @include responsive(table) {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      max-width: 55rem;
+      margin-bottom: 3.3rem;
+    }
+
+    @include responsive(phone) {
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+      max-width: 27.6rem;
+    }
+  }
+
+  &--video {
+    width: 76.2rem;
+    height: 44.2rem;
+    background-image: url("../../img/mackbook.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    position: relative;
+    margin-bottom: 2.9rem;
+
+    @include responsive(big-table) {
+      width: 60rem;
+      height: 35rem;
+    }
+    @include responsive(table) {
+      width: 50rem;
+      height: 30rem;
+    }
+    @include responsive(phone) {
+      max-width: 42rem;
+      max-height: 25rem;
+      margin-bottom: 2.2rem;
+    }
+    @include responsive(m-phone) {
+      max-width: 27rem;
+      max-height: 17.3rem;
+      margin-bottom: 2.2rem;
+    }
+  }
+
+  &--icon {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 12.2rem;
+      height: 12.2rem;
+      background-color: rgba($color-primary, 0.3);
+      border-radius: 50%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 8rem;
+      height: 8rem;
+      background-color: $color-primary;
+      border-radius: 50%;
+    }
+
+    @include responsive(table) {
+      &::before {
+        width: 10rem;
+        height: 10rem;
+      }
+      &::after {
+        width: 6rem;
+        height: 6rem;
+      }
+    }
+    @include responsive(phone) {
+      &::before {
+        width: 6rem;
+        height: 6rem;
+      }
+      &::after {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+  &--img {
+    width: 1.4rem;
+    height: 1.2rem;
+    z-index: 20;
+
+    @include responsive(table) {
+      width: 1.2rem;
+      height: 1rem;
+    }
+    @include responsive(phone) {
+      width: 0.8rem;
+      height: 0.6rem;
+    }
+  }
+  &--video__text {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-white;
+    font-size: 2rem;
+    line-height: 1.9rem;
+    font-weight: 500;
+
+    @include responsive(table) {
+      font-size: 1.5rem;
+      line-height: 1.4rem;
+    }
+    @include responsive(phone) {
+      font-size: 1rem;
+      line-height: 0.9rem;
+    }
+  }
+
+  &--card {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 5.6rem 5.3rem;
+    background-color: $color-white;
+    border-radius: 4rem;
+    margin-bottom: 2.6rem;
+
+    @include responsive(big-table) {
+      padding: 3rem 3.8rem;
+    }
+
+    @include responsive(table) {
+      padding: 2.5rem 3rem;
+    }
+    @include responsive(phone) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &--card__item {
+    text-align: left;
+  }
+
+  &--card__item:not(:last-child) {
+    padding-right: 6rem;
+    border-right: 1px solid $card-bg-color;
+    margin-right: 5.8rem;
+
+    @include responsive(desktop) {
+      padding-right: 5rem;
+      margin-right: 5rem;
+    }
+
+    @include responsive(big-table) {
+      padding-right: 4.5rem;
+      margin-right: 4.5rem;
+    }
+
+    @include responsive(table) {
+      padding-right: 4rem;
+      margin-right: 4rem;
+    }
+    @include responsive(phone) {
+      padding: 0;
+      margin: 0;
+      border-right: none;
+
+      padding-bottom: 1.9rem;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid $card-bg-color;
+    }
+  }
+
+  &--number {
+    font-size: 7.7rem;
+    line-height: 3rem;
+    font-weight: 700;
+    color: $color-secondary;
+    margin-bottom: 2rem;
+
+    @include responsive(desktop) {
+      font-size: 7rem;
+    }
+    @include responsive(big-table) {
+      font-size: 6rem;
+    }
+    @include responsive(table) {
+      font-size: 5rem;
+    }
+    @include responsive(phone) {
+      margin-bottom: 1.7rem;
+    }
+  }
+  h3 {
+    max-width: 26rem;
+    margin: 0;
+    margin-bottom: 1.9rem;
+
+    @include responsive(table) {
+      margin-bottom: 1rem;
+    }
+    @include responsive(phone){
+        margin-bottom: 1.4rem;
+    }
+  }
+  &--card__paragraph {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    max-width: 28rem;
+
+    @include responsive(big-table) {
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+    @include responsive(table) {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
+  }
+
+  &--btn {
+    display: flex;
+    align-items: center;
+    column-gap: 2.4rem;
+    padding: 1.2rem 3.7rem 1.1rem 1.4rem;
+    background-color: $color-white;
+    border-radius: 11rem;
+
+   @include responsive(phone){
+    column-gap:0;
+    row-gap: 1.2rem;
+    flex-direction: column;
+    border-radius: 3rem;
+    justify-content: center;
+    padding: 1.1rem 2.5rem 2.2rem 2.6rem;
+   }
+  }
+
+  &--btn__paragraph {
+    width: 21.4rem;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    font-weight: 600;
+
+    @include responsive(table){
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+    }
+    @include responsive(phone){
+        width: 24.9rem;
+        text-align: center;
+        line-height: 1.8rem;
+    }
+  }
+}

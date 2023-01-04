@@ -1,22 +1,23 @@
 .header {
   padding: 1.2rem;
-//   background-color: $gray-bg-color;
-  
-//   background-repeat: no-repeat;
+  background-image: url("../../img/bg-img.jpg");
+  background-position-y: -21.5rem;
+  background-position-x: -5rem;
+  background-repeat: repeat;
   height: 100vh;
 
-  @include responsive(table){
-    height:150vh;
+  @include responsive(table) {
+    height: 150vh;
   }
-  @include responsive(phone){
-    height:120vh;
+  @include responsive(phone) {
+    height: 110vh;
+    background-position:center;
   }
 }
 
 // about section
 
 .about__content {
-  
   padding-top: 6rem;
   display: flex;
   align-items: flex-start;
@@ -24,26 +25,26 @@
 
   position: relative;
 
-  @include responsive(table){
+  @include responsive(table) {
     flex-direction: column;
     align-items: center;
-    row-gap: 3.5rem;    
+    row-gap: 3.5rem;
   }
 
-  &--repo{
+  &--repo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
-    @include responsive(table){
-        align-items: center;
+    @include responsive(table) {
+      align-items: center;
     }
   }
   h1 {
     margin-bottom: 1.5rem;
     padding-bottom: 3.1rem;
     position: relative;
-    
+
     span {
       color: $color-primary;
     }
@@ -56,24 +57,23 @@
       height: 2px;
       background-color: $color-gray-underline;
     }
-    
-    @include responsive(big-table){
-        width: 45rem;
-        
-    }
-    @include responsive(table){
-        width: 35rem;
-        text-align: center;
-        margin: auto;
-        margin-bottom: 2rem;
-        padding-bottom: 2rem;
 
-        &::after{
-            width: 100%;
-        }
+    @include responsive(big-table) {
+      width: 45rem;
     }
-    @include responsive(phone){
-        width: 30rem;
+    @include responsive(table) {
+      width: 35rem;
+      text-align: center;
+      margin: auto;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+
+      &::after {
+        width: 100%;
+      }
+    }
+    @include responsive(phone) {
+      width: 30rem;
     }
   }
 
@@ -86,19 +86,19 @@
     width: 36.5rem;
     margin-bottom: 1.8rem;
 
-    @include responsive(big-table){
-        width: 38rem;
-        font-size: 1.4rem;
-        font-weight: 2rem;
-       text-align: center;
+    @include responsive(big-table) {
+      width: 38rem;
+      font-size: 1.4rem;
+      font-weight: 2rem;
+      text-align: center;
     }
 
-    @include responsive(phone){
-        width: 27rem;
-        font-size: 1.2rem;
-        line-height: 1.8rem;
-    
-        margin-bottom: 2.1rem;
+    @include responsive(phone) {
+      width: 27rem;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+
+      margin-bottom: 2.1rem;
     }
   }
 
@@ -106,22 +106,22 @@
     width: 39rem;
     // height: 40.8rem;
 
-    @include responsive(big-table){
-        max-width: 35rem;
-        height: 36rem;
+    @include responsive(big-table) {
+      max-width: 35rem;
+      height: 36rem;
     }
 
-    @include responsive(table){
-        width: 80%;
-        height: auto;
+    @include responsive(table) {
+      width: 80%;
+      height: auto;
     }
-    @include responsive(phone){
-        width: 21rem;
-        height: 21.9rem;
+    @include responsive(phone) {
+      width: 21rem;
+      height: 21.9rem;
     }
   }
 
-  &--arrow{
+  &--arrow {
     position: absolute;
     bottom: -7.5rem;
     left: 48%;
@@ -135,11 +135,11 @@
     align-items: center;
     justify-content: center;
     font-size: 1.8rem;
-    border-radius:50%;
+    border-radius: 50%;
     z-index: 20;
-    
-    span{
-        transform: rotate(90deg);
+
+    span {
+      transform: rotate(90deg);
     }
   }
 }

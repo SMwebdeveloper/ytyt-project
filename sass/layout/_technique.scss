@@ -1,6 +1,10 @@
 .technique {
   padding-top: 10.3rem;
   background-color: $color-white;
+
+  @include responsive(phone){
+    padding-top: 9rem;
+  }
 }
 
 .technique__content {

@@ -1,8 +1,14 @@
 .card {
-  padding: 8.4rem 0;
+  padding: 8.4rem 0 5rem;
   border-bottom-left-radius: 10rem;
   border-bottom-right-radius: 10rem;
   background-color: $color-white;
+
+  @include responsive(phone){
+    padding: 5.8rem 0 1.2rem;
+    border-bottom-left-radius: 3.6rem;
+  border-bottom-right-radius: 3.6rem;
+  }
 }
 
 .card__content {
