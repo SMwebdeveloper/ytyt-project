@@ -1,5 +1,6 @@
 .footer{
   padding-top: 6.6rem;
+  padding-bottom: 3rem;
 }
 
 .footer__content{
@@ -9,43 +10,254 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    padding-bottom: 4.7rem;
+    border-bottom: 1px solid $color-underline-2;
+    margin-bottom: 2.8rem;
+
+    @include responsive(table){
+      padding-bottom:3.7rem ;
+      margin-bottom: 1.8rem;
+    }
+
+    @include responsive(phone){
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 3.2rem;
+      margin-bottom: 2.5rem;
+    }
+
   }
 
   &--link{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
 
+   @include responsive(phone){
+    align-items: center;
+   }
   }
 
   &--logo{
     display: flex;
     align-items: center;
     margin-bottom: 4rem;
+
+    @include responsive(table){
+      margin-bottom: 2.5rem;
+    }
+    @include responsive(phone){
+     margin-bottom:2.8rem ; 
+    }
+
   }
   &--logo__img{
     width: 8.7rem;
     height: 3.2rem;
     margin-right: 1.8rem;
+    
+    @include responsive(table){
+      width: 7rem;
+      height: 2.5rem;
+    }
+    @include responsive(phone){
+      width: 8.7rem;
+      height: 3.2rem;
+    }
   }
   &--logo__paragraph{
     font-size: 1.6rem;
     line-height: 1.9rem;
     color: $color-gray-text;
     width: 15rem;
+
+    @include responsive(table){
+      font-size: 1.4rem;
+    }
+
+    @include responsive(phone){
+      font-size: 1.5rem;
+    }
   }
 
   &--logo__list{
     display: flex;
     align-items: center;
+
+    @include responsive(phone){
+      margin-bottom: 4.3rem;
+    }
   }
   &--logo__link{
     text-decoration: none;
     background-color: $color-text;
     width: 3.4rem;
     height: 3.4rem;
-    display: inline-block;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+
+    &:hover{
+      background-color: $color-primary;
+    }
   }
   &--logo__link:not(:last-child){
     margin-right: 1.6rem;
   }
-  &--lo
+ 
+  
+  &--part{
+    display: flex;
+    align-items: flex-start;
+
+    @include responsive(phone){
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &--list{
+    list-style: none;
+    margin-right: 16.6rem;
+
+    @include responsive(table){
+      margin-right: 8rem;
+    }
+
+    @include responsive(phone){
+      margin-right: 0;
+      margin-bottom: 4.3rem;
+    }
+  }
+
+  &--item:not(:last-child){
+    margin-bottom: 2.5rem;
+
+    @include responsive(table){
+      margin-bottom: 2rem;
+    }
+  }
+
+  &--repo{
+    @include responsive(phone){
+      text-align: center;
+    }
+  }
+  &--repo__admin{
+    margin-bottom: 6.5rem;
+
+    @include responsive(table){
+      margin-bottom: 5rem;
+    }
+    @include responsive(phone){
+      margin-bottom: 3.5rem;
+    }
+  }
+  &--repo__number{
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    color:$color-secondary;
+
+    margin: 0;
+    margin-bottom: .4rem;
+
+    @include responsive(table){
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+
+    @include responsive(phone){
+      font-size: 1.6rem;
+      line-height: 2.3rem;
+    }
+  }
+  &--repo__gmail{
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    font-weight: 400;
+
+    @include responsive(table){
+      font-size: 1.4rem;
+      line-height: 2.3rem;
+    }
+
+    @include responsive(phone){
+      font-size: 1.6rem;
+      line-height: 2.3rem;
+    }
+  }
+
+  &--repo__list{
+    list-style: none;
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+    color: $color-gray-text;
+    
+    @include responsive(table){
+      font-size: 1.1rem;
+      line-height: 2.1rem;
+    }
+
+    @include responsive(phone){
+      font-size: 1.3rem;
+      line-height: 2.3rem;
+    }
+  }
+
+  &--foot{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include responsive(phone){
+      flex-direction: column;
+
+    }
+  }
+
+  &--foot__paragraph{
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    font-weight: 400;
+    color: $color-gray-text;
+
+    @include responsive(big-table){
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+    @include responsive(phone){
+      font-size: 1.2rem;
+      margin-bottom: 1.3rem;
+    }
+  }
+  &--foot__list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    color: $color-gray-text;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+
+    @include responsive(big-table){
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+    }
+
+    @include responsive(phone){
+      flex-direction: column;
+      color: $color-primary;
+    }
+  }
+  &--foot__item:not(:last-child){
+    margin-right: 6.4rem;
+
+    @include responsive(phone){
+      margin-right: 0;
+      margin-bottom: .6rem;
+    }
+  }
 }
