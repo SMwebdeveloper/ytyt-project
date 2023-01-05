@@ -1,0 +1,51 @@
+.footer{
+  padding-top: 6.6rem;
+}
+
+.footer__content{
+
+  // footer head part
+  &--head{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &--link{
+
+  }
+
+  &--logo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+  &--logo__img{
+    width: 8.7rem;
+    height: 3.2rem;
+    margin-right: 1.8rem;
+  }
+  &--logo__paragraph{
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: $color-gray-text;
+    width: 15rem;
+  }
+
+  &--logo__list{
+    display: flex;
+    align-items: center;
+  }
+  &--logo__link{
+    text-decoration: none;
+    background-color: $color-text;
+    width: 3.4rem;
+    height: 3.4rem;
+    display: inline-block;
+    border-radius: 50%;
+  }
+  &--logo__link:not(:last-child){
+    margin-right: 1.6rem;
+  }
+  &--lo
+}

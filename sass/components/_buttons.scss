@@ -24,7 +24,7 @@
         transform: rotate(-45deg);
         margin-left: .8rem;
 
-        @include responsive(table){
+        @include responsive(desktop){
             font-size: 2rem;
         }
 
@@ -34,15 +34,20 @@
         }
     }
 
+    @include responsive(desktop){
+        font-size: 1.6rem;
+        padding:2.5rem 4.8rem 2.6rem 4.3rem ;
+    }
 
     @include responsive(big-table){
-        padding:2.5rem 4.8rem 2.6rem 4.3rem ;
-        font-size: 1.8rem;
+        padding: 2rem 4rem 2.2rem 3.9rem;
+        text-align: left;
+        font-size: 1.4rem;
     }
 
     @include responsive(phone){
-        font-size: 1.6rem;
-        line-height: 1.7rem;
+        // font-size: 1.4rem;
+        line-height: 1.4rem;
         padding: 2.2rem 4.5rem 2.4rem 4rem;
     }
 }

@@ -1,0 +1,142 @@
+.price__table{
+    @include responsive(phone){
+        overflow-x:scroll ;
+    }
+}
+
+.table {
+  width: 100%;
+  background-color: $color-white;
+  padding: 3.3rem 4rem;
+  border-radius: 3rem;
+  margin-bottom: 2.5rem;
+
+  @include responsive(desktop){
+    padding:3rem 3rem;
+  }
+
+  @include responsive(big-table){
+    padding: 2.5rem 2rem;
+  }
+
+  
+
+  &__head {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    color: $color-secondary;
+
+
+    @include responsive(table){
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+    
+  }
+
+  &__body {
+    font-size: 1.8rem;
+    line-height: 1;
+
+    @include responsive(desktop){
+        font-size: 1.4rem;
+        // line-height: ;
+    }
+    @include responsive(table){
+        font-size: 1.3rem;
+    }
+  }
+
+  &__foot {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+
+    @include responsive(big-table){
+        font-size: 2.2rem;
+    }
+    @include responsive(table){
+        font-size: 2rem;
+    }
+    @include responsive(phone){
+        font-size: 1.9rem;
+    }
+  }
+
+  &__row {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    // column-gap: rem;
+    padding-left: 1.9rem;
+  }
+
+  &__row--dark {
+    padding: 1.7rem 1.9rem;
+    background-color: $gray-bg-color;
+    margin: 1.5rem 0;
+    border-radius: 1rem;
+  }
+
+
+  td:nth-child(1) {
+    flex-basis: 33rem;
+    text-align: left;
+    margin-right: 12rem;
+    @include responsive(desktop){
+        margin-right: 9rem;
+        flex-basis: 28rem;
+    }
+
+    @include responsive(big-table){
+        margin-right: 4rem;
+        flex-basis: 24rem;
+    }
+
+    @include responsive(table){
+        flex-basis: 20rem;
+    }
+
+    @include responsive(phone){
+        // flex-basis: 24rem;
+        width: 33rem;
+        margin-right: 8rem;
+    }
+  }
+
+  td:nth-child(2) {
+    flex-basis: 20rem;
+    text-align: left;
+    margin-right: 13rem;
+
+    @include responsive(desktop){
+        margin-right: 8rem;
+        flex-basis: 18rem;
+    }
+    @include responsive(big-table){
+        margin-right: 4rem;
+        flex-basis: 16rem;
+    }
+    @include responsive(table){
+        flex-basis: 12rem;
+    }
+    @include responsive(phone){
+        width: 15rem;
+        margin-right: 10rem;
+    }
+  }
+  td:nth-child(3) {
+   
+    text-align: left;
+
+    // @include responsive(desktop){
+       
+    // }
+
+  }
+
+  
+
+
+}
