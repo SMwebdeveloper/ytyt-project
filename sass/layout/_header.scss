@@ -6,12 +6,19 @@
   background-repeat: repeat;
   height: 100vh;
 
+  @include responsive(big-table) {
+    height: 95vh;
+    background-position: center ;
+  }
   @include responsive(table) {
     height: 150vh;
+    background-position:center;
+    background-position-y:-80rem;
+    background-position-x:-61.5rem;
   }
   @include responsive(phone) {
     height: 110vh;
-    background-position:center;
+    background-position: center;
   }
 }
 
