@@ -152,5 +152,9 @@
     span {
       transform: rotate(90deg);
     }
+
+    @include responsive(phone){
+      left: 43%;
+    }
   }
 }
