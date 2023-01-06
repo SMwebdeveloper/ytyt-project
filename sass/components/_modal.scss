@@ -4,19 +4,21 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba($color-text, 0.8);
-  visibility: hidden;
+  background-color: rgba($color-text, 0.9);
   transition: all .3s;
   opacity: 0;
   z-index: 999;
+  visibility: hidden;
+  transition: all 0.5s;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+
 
   &__content {
     width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: $color-white;
     border-radius: 3rem;
     text-align: center;
@@ -25,10 +27,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // transform: scale(0.25);
-    // opacity: 0;
-    // visibility: hidden;
-
+    
     @include responsive(phone) {
       width: 90%;
       padding: 4.5rem 1.8rem 3.8rem;
@@ -118,7 +117,7 @@
       margin-bottom: 1.8rem;
 
       @include responsive(phone) {
-        font-weight: 600;
+      font-weight: 600;
       }
     }
     // modal form
@@ -193,8 +192,15 @@
 
   // modal content second item
 
+  &__content:nth-child(1){
+    display: none;
+
+  }
+
   &__content:nth-child(2) {
     padding: 3.6rem 3.4rem;
+    // visibility: hidden;
+    display: none;
 
     p {
       text-align: left;
@@ -215,6 +221,7 @@
 
   //   modal content 3 item
   &__content:nth-child(3) {
+    display: none;
     h5 {
       text-align: left;
       margin-bottom: 2.7rem;
@@ -248,6 +255,7 @@
 
   //   modal content 4 item
   &__content:nth-child(4) {
+    display: none;
     .modal__content--title__card {
       display: flex;
       flex-direction: column;
@@ -270,7 +278,7 @@
         display: none;
       }
     }
-    // width: 100rem;
+  
   }
 
   
@@ -278,13 +286,11 @@
 
 // hidden
 
-.modal-hidden{
-    opacity: 1;
-    visibility: visible;
+.d-block{
+  display: block;
 }
 
-.modal__item--hidden{
-    // visibility: visible;
-    opacity: 1;
-    transform: scale(1);
+.modal-hidden{
+  visibility: visible;
+  opacity: 1;
 }

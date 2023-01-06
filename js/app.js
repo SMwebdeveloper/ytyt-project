@@ -12,24 +12,32 @@
 
 //   modal 
 
-const btnTest = document.getElementById('btn-test');
+document.getElementById('button-0').addEventListener('click', ()=>{
+  document.getElementById('modal').classList.add('modal-hidden')
+  document.getElementById('modal-1').style.display = 'flex'
+})
+document.getElementById('modal-btn-1').addEventListener('click', () => {
+  document.getElementById('modal-1').style.display = 'none'
+  document.getElementById('modal-2').style.display = 'block'
+})
 
-const modal = document.getElementById('modal');
+document.getElementById('modal-btn-2').addEventListener('click', () => {
+  document.getElementById('modal-2').style.display = 'none'
+  document.getElementById('modal-3').style.display = 'block'
+})
 
-const modalItem1 = document.getElementById('modal-1');
-const modalItem2 = document.getElementById('modal-2');
-const modalItem3 = document.getElementById('modal-3');
-const modalItem4 = document.getElementById('modal-4');
-
-const modalBtnTimes = document.querySelectorAll('.btn--times');
-
-const modalBtn1 = document.getElementById('modal-btn-1');
-const modalBtn2 = document.getElementById('modal-btn-2');
-const modalBtn3 = document.getElementById('modal-btn-3');
-const modalBtn4 = document.getElementById('modal-btn-4');
-
-console.log(modalItem1);
-btnTest.addEventListener('click', () =>{
-    modal.classList.add('modal-hidden');
-    modalItem1.style.visibility = 'visible'
+document.getElementById('modal-btn-3').addEventListener('click', () => {
+  document.getElementById('modal-3').style.display = 'none'
+  document.getElementById('modal-4').style.display = 'flex'
+})
+document.getElementById('modal-btn-4').addEventListener('click', () => {
+  document.getElementById('modal-4').style.display = 'none'
+  document.getElementById('modal').classList.remove('modal-hidden')
+})
+document.getElementById('modal-btn-times').addEventListener('click', ()=>{
+  document.getElementById('modal').classList.remove('modal-hidden')
+  document.getElementById('modal-1').style.display = 'none'
+  document.getElementById('modal-2').style.display = 'none'
+  document.getElementById('modal-3').style.display = 'none'
+  document.getElementById('modal-4').style.display = 'none'
 })
