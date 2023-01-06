@@ -17,8 +17,12 @@
     background-position-x:-61.5rem;
   }
   @include responsive(phone) {
-    height: 110vh;
+    height: 120vh;
     background-position: center;
+  }
+  @include responsive(m-phone) {
+    height: 120vh;
+    // background-position: center;
   }
 }
 
@@ -132,8 +136,8 @@
     position: absolute;
     bottom: -7.5rem;
     left: 48%;
-    // transform: translate(-50, 0);
-    // margin-left: auto;
+    transform: translate(-50, 0);
+    margin: auto;
 
     background-color: $color-white;
     width: 3.7rem;
